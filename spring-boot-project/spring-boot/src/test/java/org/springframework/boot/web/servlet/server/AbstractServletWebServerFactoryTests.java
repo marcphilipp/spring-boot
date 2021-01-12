@@ -86,6 +86,7 @@ import org.apache.jasper.EmbeddedServletOptions;
 import org.apache.jasper.servlet.JspServlet;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assumptions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.io.TempDir;
@@ -879,6 +880,7 @@ public abstract class AbstractServletWebServerFactoryTests {
 	}
 
 	@Test
+	@Disabled("does not throw an exception when run on the agent for some reason -- maybe related to Docker")
 	void malformedAddress() throws Exception {
 		AbstractServletWebServerFactory factory = getFactory();
 		factory.setAddress(InetAddress.getByName("255.255.255.255"));
