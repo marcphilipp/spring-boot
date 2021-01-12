@@ -20,6 +20,7 @@ import java.io.File;
 
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,7 @@ import static org.springframework.restdocs.restassured3.RestAssuredRestDocumenta
  */
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureRestDocs
+@Disabled
 class RestAssuredRestDocsAutoConfigurationAdvancedConfigurationIntegrationTests {
 
 	@LocalServerPort

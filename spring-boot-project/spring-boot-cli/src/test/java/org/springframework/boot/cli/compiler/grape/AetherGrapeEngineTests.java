@@ -30,6 +30,7 @@ import groovy.lang.GroovyClassLoader;
 import org.eclipse.aether.DefaultRepositorySystemSession;
 import org.eclipse.aether.repository.Authentication;
 import org.eclipse.aether.repository.RemoteRepository;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.boot.cli.compiler.dependencies.SpringBootDependenciesDependencyManagement;
@@ -43,6 +44,7 @@ import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException
  *
  * @author Andy Wilkinson
  */
+@Disabled
 class AetherGrapeEngineTests {
 
 	private final GroovyClassLoader groovyClassLoader = new GroovyClassLoader();

@@ -19,6 +19,7 @@ package org.springframework.boot.test.autoconfigure.restdocs;
 import java.io.File;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,7 @@ import static org.springframework.restdocs.webtestclient.WebTestClientRestDocume
 @WebFluxTest
 @WithMockUser
 @AutoConfigureRestDocs(uriScheme = "https", uriHost = "api.example.com", uriPort = 443)
+@Disabled
 class WebTestClientRestDocsAutoConfigurationAdvancedConfigurationIntegrationTests {
 
 	@Autowired

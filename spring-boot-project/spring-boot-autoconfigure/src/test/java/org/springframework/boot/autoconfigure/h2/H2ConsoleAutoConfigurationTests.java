@@ -21,6 +21,7 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -47,6 +48,7 @@ import static org.mockito.Mockito.mock;
  * @author Stephane Nicoll
  * @author Shraddha Yeole
  */
+@Disabled
 class H2ConsoleAutoConfigurationTests {
 
 	private final WebApplicationContextRunner contextRunner = new WebApplicationContextRunner()

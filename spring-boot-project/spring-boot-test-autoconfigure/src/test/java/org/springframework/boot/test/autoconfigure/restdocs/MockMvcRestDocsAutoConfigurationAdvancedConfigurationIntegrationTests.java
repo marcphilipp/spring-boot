@@ -19,6 +19,7 @@ package org.springframework.boot.test.autoconfigure.restdocs;
 import java.io.File;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @WebMvcTest(controllers = RestDocsTestController.class)
 @WithMockUser
 @AutoConfigureRestDocs
+@Disabled
 class MockMvcRestDocsAutoConfigurationAdvancedConfigurationIntegrationTests {
 
 	@Autowired
