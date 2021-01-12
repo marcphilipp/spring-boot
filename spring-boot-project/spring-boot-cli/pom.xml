@@ -201,6 +201,17 @@
 						</gradleEnterprise>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<configuration>
+						<properties>
+							<distribution>
+								<enabled>false</enabled>
+							</distribution>
+						</properties>
+					</configuration>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 
