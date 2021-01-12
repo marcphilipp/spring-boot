@@ -73,10 +73,26 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
+					<properties>
+						<distribution>
+							<enabled>false</enabled>
+						</distribution>
+					</properties>
 					<systemPropertyVariables>
 						<maven.home>${maven.home}</maven.home>
 						<repository>${repository}</repository>
 					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<configuration>
+					<properties>
+						<distribution>
+							<enabled>false</enabled>
+						</distribution>
+					</properties>
 				</configuration>
 			</plugin>
 		</plugins>
