@@ -175,6 +175,35 @@
 				<directory>${basedir}/src/main/resources</directory>
 			</resource>
 		</resources>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.gradle</groupId>
+					<artifactId>gradle-enterprise-maven-extension</artifactId>
+					<configuration>
+						<gradleEnterprise>
+							<plugins>
+								<plugin>
+									<artifactId>maven-surefire-plugin</artifactId>
+									<inputs>
+										<fileSets>
+											<fileSet>
+												<name>src-test</name>
+												<paths>
+													<path>src/test</path>
+												</paths>
+											</fileSet>
+										</fileSets>
+									</inputs>
+								</plugin>
+							</plugins>
+						</gradleEnterprise>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

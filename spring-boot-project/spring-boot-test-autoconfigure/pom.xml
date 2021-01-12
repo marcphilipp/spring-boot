@@ -381,4 +381,49 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.gradle</groupId>
+					<artifactId>gradle-enterprise-maven-extension</artifactId>
+					<configuration>
+						<gradleEnterprise>
+							<plugins>
+								<plugin>
+									<artifactId>maven-surefire-plugin</artifactId>
+									<inputs>
+										<fileSets>
+											<fileSet>
+												<name>test-webapp</name>
+												<paths>
+													<path>src/main/webapp</path>
+													<path>src/test/webapp</path>
+												</paths>
+											</fileSet>
+										</fileSets>
+									</inputs>
+								</plugin>
+								<plugin>
+									<artifactId>maven-failsafe-plugin</artifactId>
+									<inputs>
+										<fileSets>
+											<fileSet>
+												<name>test2-webapp</name>
+												<paths>
+													<path>src/main/webapp</path>
+													<path>src/test/webapp</path>
+												</paths>
+											</fileSet>
+										</fileSets>
+									</inputs>
+								</plugin>
+							</plugins>
+						</gradleEnterprise>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>

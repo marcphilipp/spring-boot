@@ -131,8 +131,77 @@
 						</execution>
 					</executions>
 				</plugin>
+
+				<plugin>
+					<groupId>com.gradle</groupId>
+					<artifactId>gradle-enterprise-maven-extension</artifactId>
+					<configuration>
+						<gradleEnterprise>
+							<plugins>
+								<plugin>
+									<artifactId>maven-surefire-plugin</artifactId>
+									<inputs>
+										<fileSets>
+											<fileSet>
+												<name>src-test-resources</name>
+												<paths>
+													<path>src/test/resources</path>
+												</paths>
+											</fileSet>
+											<fileSet>
+												<name>target</name>
+												<paths>
+													<path>target</path>
+												</paths>
+												<includes>
+													<include>*.jar</include>
+												</includes>
+											</fileSet>
+											<fileSet>
+												<name>webapp</name>
+												<paths>
+													<path>src/main/webapp</path>
+												</paths>
+											</fileSet>
+										</fileSets>
+									</inputs>
+								</plugin>
+								<plugin>
+									<artifactId>maven-failsafe-plugin</artifactId>
+									<inputs>
+										<fileSets>
+											<fileSet>
+												<name>src-test-resources</name>
+												<paths>
+													<path>src/test/resources</path>
+												</paths>
+											</fileSet>
+											<fileSet>
+												<name>target</name>
+												<paths>
+													<path>target</path>
+												</paths>
+												<includes>
+													<include>*.jar</include>
+												</includes>
+											</fileSet>
+											<fileSet>
+												<name>webapp</name>
+												<paths>
+													<path>src/main/webapp</path>
+												</paths>
+											</fileSet>
+										</fileSets>
+									</inputs>
+								</plugin>
+							</plugins>
+						</gradleEnterprise>
+					</configuration>
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
