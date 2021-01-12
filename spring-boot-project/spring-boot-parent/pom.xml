@@ -312,6 +312,14 @@
 							</goals>
 						</execution>
 					</executions>
+					<configuration>
+						<properties>
+							<distribution>
+								<enabled>true</enabled>
+								<maxLocalExecutors>0</maxLocalExecutors>
+							</distribution>
+						</properties>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -514,6 +522,12 @@
 					<trimStackTrace>false</trimStackTrace>
 					<redirectTestOutputToFile>true</redirectTestOutputToFile>
 					<runOrder>alphabetical</runOrder>
+					<properties>
+						<distribution>
+							<enabled>true</enabled>
+							<maxLocalExecutors>0</maxLocalExecutors>
+						</distribution>
+					</properties>
 				</configuration>
 			</plugin>
 			<plugin>
